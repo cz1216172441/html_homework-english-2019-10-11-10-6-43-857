@@ -1,10 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>HTML</title>
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+    <style>
+        h3 {
+            margin-top: 10px;
+        }
+        .form-row {
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<body>
 
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <form action="/calculte" method="POST">
+                <h2>Unified Modeling Language Theory Test</h2>
+                <div class="row">
+                    <div class="col-4">
+                        Test Subject: Unified Modeling Language
+                    </div>
+                    <div class="col-2">
+                        Time: 100
+                    </div>
+                    <div class="col-2">
+                        Minute Score: 100
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group col">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Class</span>
+                        </div>
+                        <input name="class" type="text" class="form-control">
+                    </div>
+                    <div class="input-group col">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Student ID</span>
+                        </div>
+                        <input name="studentId" type="text" class="form-control">
+                    </div>
+                    <div class="input-group col">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Name</span>
+                        </div>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <h3>1、Fill in the blanks(5 points per space, 20 points total)</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="umlFullName" class="col-form-label">
+                                1. The full name of UML in Chinese is: 
+                            </label>
+                            <div class="col">
+                              <input name="a" type="text" class="form-control" id="umlFullName">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="objProminentFeature" class="col-form-label">
+                                2. The most prominent feature of the object is: 
+                            </label>
+                            <div class="col">
+                              <input name="b" type="text" class="form-control" id="objProminentFeature">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2、Multiple choice question(lO points per space, 20 points total)</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="col-form-label row">
+                                1. The relationship between UML and software engineering is: 
+                            </label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="ca" name="c" class="custom-control-input" value="0">
+                                <label class="custom-control-label" for="ca">
+                                    (A) UML is software engineering
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="cb" name="c" class="custom-control-input" value="1">
+                                <label class="custom-control-label" for="cb">
+                                    (B) UML participates in several stages of the software development process in software engineering
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="cd" name="c" class="custom-control-input" value="2">
+                                <label class="custom-control-label" for="cd">
+                                    (C) UML has nothing to do with software engineering
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="ce" name="c" class="custom-control-input" value="3">
+                                <label class="custom-control-label" for="ce">
+                                    (D) UML is part of software engineering
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label row">
+                                2. Java language support: 
+                            </label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="da" name="d" class="custom-control-input" value="0">
+                                <label class="custom-control-label" for="da">
+                                    (A) Single inheritance
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="db" name="d" class="custom-control-input" value="1">
+                                <label class="custom-control-label" for="db">
+                                    (B) Multiple inheritance
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="dd" name="d" class="custom-control-input" value="2">
+                                <label class="custom-control-label" for="dd">
+                                    (C) Single inheritance and multiple inheritance support
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="de" name="d" class="custom-control-input" value="3">
+                                <label class="custom-control-label" for="de">
+                                    (D) Single inheritance and multiple inheritance are not supported
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3、Multiple choice(lO points per space, 20 points total)</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="col-form-label row">
+                                1. The granularity of the use case is divided into the following three: 
+                            </label>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ea" name="e" value="0">
+                                <label class="custom-control-label" for="ea">(A) Overview level</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="eb" name="e" value="1">
+                                <label class="custom-control-label" for="eb">(B) Demand level</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ec" name="e" value="2">
+                                <label class="custom-control-label" for="ec">(C) User target level</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ed" name="e" value="3">
+                                <label class="custom-control-label" for="ed">(D) Sub-function level</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label row">
+                                2. The class diagram consists of which of the following three parts: 
+                            </label>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fa" name="f" value="0">
+                                <label class="custom-control-label" for="fa">(A) Name</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fb" name="f" value="1">
+                                <label class="custom-control-label" for="fb">(B) Attribute</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fc" name="f" value="2">
+                                <label class="custom-control-label" for="fc">(C) Operation</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fd" name="f" value="3">
+                                <label class="custom-control-label" for="fd">(D) Function</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>4、True or False(lO points per space, 20 points total)</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="umlFullName" class="col-form-label">
+                                1. Use case diagrams are only used to communicate and communicate with customers to determine demand。 
+                            </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="g" id="ga" value="true">
+                                <label class="form-check-label" for="ga">✓</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="g" id="gb" value="false">
+                                <label class="form-check-label" for="gb">X</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="umlFullName" class="col-form-label">
+                                2. In the state diagram, the termination state allows any number of multiples in a state diagram。 
+                            </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h" id="ha" value="true">
+                                <label class="form-check-label" for="ha">✓</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="h" id="hb" value="false">
+                                <label class="form-check-label" for="hb">X</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                
+                <h3>5、Short answer question(20 points per space, 20 points total)</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="col-form-label row" for="i">
+                                1. Briefly describe what the model is and how it behaves? 
+                            </label>
+                            <textarea class="form-control" id="i" name="i" rows="5"></textarea>
+                        </div>    
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Calculating Score</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
